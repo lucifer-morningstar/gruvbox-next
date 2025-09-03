@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-DATA=$CURRENT_DIR/data
 LIB=$CURRENT_DIR/lib
 #tmux source $LIB/gbn-colors.conf
 #tmux source $TMUX_ROOT/tmux.conf
-if [ ! -d $DATA  ];then
-  mkdir $CURRENT_DIR/data
-  touch $CURRENT
+DATA="$CURRENT_DIR/data"
+[ ! -d $DATA  ] && mkdir $CURRENT_DIR/data
 if [ -n $DATA ]; then
   # check the hashes for each file in the list and compare them 
   # against the ones listed in data/state. If missing or mismatched
