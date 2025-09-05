@@ -7,4 +7,4 @@ tmux source-file "$CURRENT_DIR/lib/gbn-icons.conf"
 
 #tmux run-shell "$CURRENT_DIR/scripts/gbn.sh"
 tmux bind T run-shell "$CURRENT_DIR/gruvbox-next.tmux"
-tmux display "#[align=centre,bg=#{@Dark0},fg=#{@Orange}]Gruvbox-Next Loaded"
+tmux display "#[align=centre,bg=#{@Dark0},fg=#{@Orange}]#{@Alert}#[fg=#{@Yellow}]Gruvbox-Next Loaded"
