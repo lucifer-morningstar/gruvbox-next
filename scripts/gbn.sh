@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-tmux run-shell "bash $LIB/gbn-colors.sh"
+local colors="$TMUX_ROOT/plugins/gruvbox-next/lib/gbn-colors"
+local color=""
+local name=""
+while read -r line; do
+  $name="@${line%%:*}";
+  $color="\"${line##*:}\"";
+  tmux set-option -g "${name}" "${color}"
+done
+tmux refresh-client
 #tmux source $TMUX_ROOT/tmux.conf
-#tmux set-option -g @Red "#fb4934"
+
 #tmux setenv HASRUN 1
 tmux display "Gruvbox-Next ready HASRUN: #{HASRUN}"
