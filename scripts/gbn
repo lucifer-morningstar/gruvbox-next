@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # make new config
 local dir="$( tmux showenv DIR )"
-local lib="${dir}/lib"
-cat $lib/gbn-colors.conf >> "${dir}/main.tmux"
+local lib=$dir/lib
+cat $lib/gbn-colors.conf >> $dir/main.tmux
 
 tmux display "#[bg=#{@Dark0},fg=#{@Orange}]current-dir:$( tmux showenv DIR ) ready HASRUN: #{HASRUN}"
