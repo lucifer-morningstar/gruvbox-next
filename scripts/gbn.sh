@@ -5,7 +5,7 @@ local name=""
 while read -r line; do
   $name="@${line%%:*}";
   $color="\"${line##*:}\"";
-  printf "tmux set -g ${name} ${color}\n",$1,$2
+  tmux display -p "$( printf "tmux set -g ${name} ${color}\n",$1,$2 )"
   tmux set-option -g "${name}" "${color}"
 done
 tmux refresh-client
