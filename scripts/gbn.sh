@@ -5,4 +5,4 @@ local of="../main.tmux"
 echo '#!/usr/bin/env bash' > "$of" 
 cat $lib/gbn-colors.conf >> "$of"
 
-tmux display "#[bg=#{@Dark0},fg=#{@Orange}]Gruvbox-Next ready HASRUN: #{HASRUN}"
+tmux display "#[bg=#{@Dark0},fg=#{@Orange}]${CURRENT_DIR}Gruvbox-Next ready HASRUN: #{HASRUN}"
