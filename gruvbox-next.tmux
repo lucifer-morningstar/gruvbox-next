@@ -7,5 +7,5 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #tmux source-file "$CURRENT_DIR/lib/gbn-statusbar.conf"
 
 #tmux run-shell "$CURRENT_DIR/scripts/gbn.sh"
-tmux bind T run-shell "$CURRENT_DIR/scripts/gbn.sh ${CURRENT_DIR}"
+tmux bind T run-shell "$CURRENT_DIR/scripts/gbn.sh \"${CURRENT_DIR}\""
 
